@@ -6,7 +6,7 @@ const Card = ({ name, date, time, guests }) => {
       <h2>{name}</h2>
       <p>{date}</p>
       <p>{time}</p>
-      <p>`Number of guests: {guests}`</p>
+      <p>Number of guests: {guests}</p>
       <button>Cancel</button>
     </article>
   )
