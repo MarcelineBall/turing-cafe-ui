@@ -11,6 +11,10 @@ class Form extends Component {
     }
   }
 
+  clearInputs = () => {
+    this.setState({ name: '', date: '', time: '', guests: '' })
+  }
+
   bookReservation = (event) => {
     event.preventDefault()
     const newReservation = {
@@ -18,6 +22,7 @@ class Form extends Component {
       ...this.state
     }
     this.props.makeReservation(newReservation)
+    this.clearInputs()
   }
 
   handleChange = (event) => {
@@ -59,7 +64,7 @@ class Form extends Component {
           onChange={(event) => this.handleChange(event)}
         />
 
-        <button >Make Reservation</button>
+        <button onClick={ (event) => {this.bookReservation(event)}}>Make Reservation</button>
       </form>
     )
   }
