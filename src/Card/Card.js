@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({ name, date, time, guests }) => {
   return(
     <article>
-      <h2>name</h2>
-      <p>date</p>
-      <p>time</p>
-      <p>number of guests</p>
+      <h2>{name}</h2>
+      <p>{date}</p>
+      <p>{time}</p>
+      <p>`Number of guests: {guests}`</p>
       <button>Cancel</button>
     </article>
   )
