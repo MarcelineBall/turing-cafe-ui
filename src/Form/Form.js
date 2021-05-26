@@ -20,6 +20,29 @@ class Form extends Component {
           placeholder='name'
           value={this.state.name}
         />
+
+        <input
+          type='text'
+          name='date'
+          placeholder='Date (mm/dd)'
+          value={this.state.date}
+        />
+
+        <input
+          type='text'
+          name='time'
+          placeholder='Time'
+          value={this.state.time}
+        />
+
+        <input
+          type='number'
+          name='guests'
+          placeholder='Number of guests'
+          value={this.state.guests}
+        />
+
+        <button>Make Reservation</button>
       </form>
     )
   }
