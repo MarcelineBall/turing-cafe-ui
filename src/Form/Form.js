@@ -1,14 +1,23 @@
 import React, { Component } from 'react'
 
 class Form extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       name: '',
       date: '',
       time: '',
       guests: ''
     }
+  }
+
+  bookReservation = (event) => {
+    event.preventDefault()
+    const newReservation = {
+      id: Date.now(),
+      ...this.state
+    }
+    this.props.makeReservation(newReservation)
   }
 
   handleChange = (event) => {
@@ -50,7 +59,7 @@ class Form extends Component {
           onChange={(event) => this.handleChange(event)}
         />
 
-        <button>Make Reservation</button>
+        <button >Make Reservation</button>
       </form>
     )
   }

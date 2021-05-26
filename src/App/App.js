@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Card from '../Card/Card'
 import Reservation from '../Reservation/Reservation'
 import Form from '../Form/Form'
 
@@ -20,6 +19,11 @@ class App extends Component {
       ]
     }
   }
+
+  makeReservation = (newReservation) => {
+    this.setState({reservations: [...this.state.reservations, newReservation]})
+  }
+
   render() {
     return (
       <div className="App">
